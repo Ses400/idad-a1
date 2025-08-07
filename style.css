@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap");
+
+body {
+  padding: 1rem;
+  font-family: "Google Sans Code", monospace;
+}
+
+article {
+  padding: 2rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  background: white;
+  transition: 100ms;
+  &:hover {
+    background: var(--custom_color);
+  }
+}
+
+/* https://holdspace.surge.sh/ */
+a:link {
+  color: white;
+}
+
+/* https://holdspace.surge.sh/ */
+a:visited {
+  color: rgb(255, 255, 255);
+}
+
+/* https://holdspace.surge.sh/ */
+a:active {
+  color: white;
+}
+
+/* https://holdspace.surge.sh/ */
+a:hover {
+  color: rgb(0, 0, 0);
+}
+
+main {
+  padding: 0 15%;
+  word-spacing: 10%;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  font-size: 170%;
+  text-align: left;
+  padding: 0 15%;
+}
+
+h3 {
+  font-size: 150%;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  color: rgb(68, 66, 163);
+}
+
+.scrollPara {
+  color: black;
+}

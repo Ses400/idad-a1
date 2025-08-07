@@ -4,15 +4,101 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Assignment 1</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <h1>Assignment 1: Interface design and development</h1>
 
-    <h2>Research UIs:</h2>
-    <a href="https://orb.farm/"></a>
+    <h2>
+    <article style="--custom_color: black">
+    <a href="https://holdspace.surge.sh/" target="_blank">Holdspace</a>
+    <a href="https://fractalfantasy.net/#liquidentropy" target="_blank">Liquid entropy</a>
+    </article>
+    </h2>
 
-    <h3>Information design</h3>
-
-    <p>pargraph</p>
+    <main>
+      <h3>Information design</h3>
+      <p class="scrollPara">
+        <a href="https://holdspace.surge.sh/" target="_blank">Holdspace</a>
+        uses minimal textual information and focuses on a single dynamic visual
+        interaction instead, which is a 3d pentagon made of black outlines, that
+        changes size and movement in response to sound. There's almost no
+        instructions, which is to intentionally leave users to intuitively
+        explore the relationship between sound and form to prioritise their
+        embodied understanding over cognitive instruction. The overall UI is
+        extremely minimalistic, using only black and white to contrast the
+        background and guide the user to focus on different things. When the
+        user is playing the music, there is a white background and the pentagon
+        is specifically outlined in black, to draw the user’s attention
+        immediately towards it. This whitespace amplifies the movement of the
+        pentagon, making it become more dramatic and noticeable because there’s
+        nothing competing with it. However, when the user stops, the background
+        suddenly turns black, to almost mimic being sucked in since there is
+        immediate visual contrast from the white and a pointy triangle
+        resembling a shard, is left in its stead to make the user feel more
+        unwelcomed. This encourages the user to continue their experience of the
+        pentagon. Similarly, in
+        <a href="https://fractalfantasy.net/#liquidentropy" target="_blank"
+          >Liquid entropy</a
+        >
+        the entire page feels alive due to movement and sound, not text or
+        buttons, making the aim of both websites to evoke a feeling from users.
+        Since its visuals create a floating, ambient effect, matched with the
+        visuals, the overall mood is dominant and evokes a more mysterious and
+        atmospheric experience. However, liquid entropy takes a very different
+        approach towards whitespace where it’s less structured and relies more
+        on atmosphere. Rather than large blank areas, the space is often filled
+        with ambient visuals, and floating elements making it occupied all the
+        time. There is also no central focus which is why the users are left in
+        ambiguity. This contrasts to holdspace where the whitespace was empty
+        and there is a timer which signifies the length of the experience.
+      </p>
+      </article>
+      <h3>Mapping</h3>
+      <p class="scrollPara">
+        <a
+          href="https://webaudioapi.com/book/Web_Audio_API_Boris_Smus_html/ch03.html#s03_2"
+          target="_blank"
+          >Boris Smus’ book on the web audio API</a>
+        >
+        for a way to implement this using JavaScript maths objects. All of the
+        audio tracks start playing in a loop once the interaction starts – the
+        scrolling only changes the volume. Another potential implementation
+        could pause the songs not currently part of the crossfade however in
+        this case that might cause them to fall out of sync as they are all set
+        to same bpm.
+      </p>
+      <h3>Characterisation</h3>
+      <p class="scrollPara">
+        There is a small amount of interaction required before a user is able to
+        use the scrolling mix. There is an initial popup with some minimal
+        information about the work and a warning about the download size it will
+        use. Once a user continues they are greeted by a button with the text
+        “expand to scroll” which once pressed will start the audio interaction
+        and an animation displaying this text and expanding the page size to
+        allow enough room to mix smoothly with scrolling. This animation is
+        useful to set expectations of what will be on the total page and to
+        encourage curiosity in the user who may want to read the text they have
+        briefly glimpsed.
+      </p>
+      <h3>Feedback</h3>
+      <p class="scrollPara">
+        The coloured gradients on the page were implemented as a way to give
+        additional visual feedback indicating roughly were the different tracks
+        blend into one another. Each time the page loads a new gradient is
+        generated randomly which a different band of colour added per track in
+        the list. This random generation was done by using
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/hsl"
+          target="_blank"
+          >HSL colour</a
+        >
+        values which allows more specific control over the kinds of colours
+        generated as I can shift the hue using one number while maintaining a
+        predefined saturation and lightness. This method also allows me to
+        easily generate a colour of the “opposite” hue as can be seen providing
+        the contrast between the inner box and the outer frame.
+      </p>
+    </main>
   </body>
 </html>
