@@ -15,6 +15,15 @@ article {
   }
 }
 
+article1 {
+  cursor: pointer;
+  background: white;
+  transition: 100ms;
+  &:hover {
+    background: var(--custom_color);
+  }
+}
+
 /* https://holdspace.surge.sh/ */
 a:link {
   color: white;
